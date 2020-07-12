@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# pycharm
+.idea/
+
+# PyTorch
+*.pt
+
+# mlflow
+mlruns/

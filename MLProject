@@ -1,0 +1,17 @@
+name: RedisAI MLFlow
+
+conda_env: env.yml
+
+entry_points:
+  main:
+    parameters:
+      batch-size: {type: int, default: 1024}
+      epochs: {type: int, default: 1}
+      lr: {type: float, default: 0.01}
+      log-interval: {type: int, default: 100}
+    command: |
+          python train.py \
+            --batch-size {batch-size} \
+            --epochs {epochs} \
+            --lr {lr} \
+            --log-interval {log-interval}
