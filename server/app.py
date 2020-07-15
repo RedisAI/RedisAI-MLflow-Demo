@@ -23,8 +23,6 @@ def frontend_assets(path):
 @app.route('/next')
 def next_():
     last = request.args.get('lastid')
-    if last == 'null':
-        breakpoint()
     premise = request.args.get('premise')
     if last and premise:
         return {"error": "You shouldn't send both ``last`` and ``context``"}
